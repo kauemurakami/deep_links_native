@@ -15,13 +15,13 @@ abstract class GoRootDelegate {
     routes: <RouteBase>[
       GoRoute(
         path: '/',
-        redirect: (context, state) => '/login',
+        redirect: (context, state) => '/initial',
       ),
       GoRoute(
         name: 'initial',
         path: '/initial',
         pageBuilder: (BuildContext context, GoRouterState state) {
-          print('initial login ${state.fullPath}' ?? '');
+          print('initial  ${state.fullPath}' ?? '');
           return CustomFadeTransition(
             child: MinProvider(
               controller: InitialController(),
@@ -34,7 +34,7 @@ abstract class GoRootDelegate {
             name: 'home',
             path: 'home',
             pageBuilder: (BuildContext context, GoRouterState state) {
-              print('going signup ${state.fullPath}' ?? '');
+              print('home ${state.fullPath}' ?? '');
               return CustomFadeTransition(
                 child: MinProvider(
                   controller: HomeController(),

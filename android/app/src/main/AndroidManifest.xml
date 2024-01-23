@@ -2,6 +2,7 @@
  package="com.example.deeplink_native">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:enableOnBackInvokedCallback="true"
         android:label="deeplink_native"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
